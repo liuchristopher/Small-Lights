@@ -255,7 +255,7 @@ export default function SmallLights({ initialMoment, initialCount }: Props) {
           "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.16 0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
       }}
     >
-      <header className="w-full px-6 pt-6 pb-2 flex items-center justify-between">
+      <header className="w-full px-6 pt-6 pb-2 flex items-start justify-between">
         <button
           onClick={() => { if (submitState === 'idle') setView('read'); }}
           className="text-left transition-opacity hover:opacity-60"
@@ -263,6 +263,20 @@ export default function SmallLights({ initialMoment, initialCount }: Props) {
         >
           <div className="text-sm italic" style={{ color: '#6b5845', letterSpacing: '0.02em' }}>small</div>
           <div className="text-xl -mt-1" style={{ fontWeight: 400, letterSpacing: '-0.01em' }}>lights</div>
+          <div
+            className="italic mt-1"
+            style={{
+              fontFamily: "'Fraunces', serif",
+              fontWeight: 300,
+              fontSize: '0.78rem',
+              color: '#8a7560',
+              letterSpacing: '0.01em',
+              lineHeight: 1.4,
+              maxWidth: '18rem',
+            }}
+          >
+            moments of peace, beauty, and joy to read on a hard day
+          </div>
         </button>
         <div className="flex items-center gap-5">
           {savedMoments.length > 0 && (
